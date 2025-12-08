@@ -1,4 +1,3 @@
-import { _android } from 'playwright';
 import { quitApp } from '../utils/cleanup';
 import HomePage from '../pages/Home.page';
 
