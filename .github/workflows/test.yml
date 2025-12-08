@@ -17,10 +17,7 @@ jobs:
         
     - name: Install dependencies
       run: |
-        npm install  # ← Use npm install instead of npm ci
-        # OR if you want to keep npm ci:
-        rm -f package-lock.json
-        npm ci
+        npm install
         
     - name: Run Tests
       run: npm test
