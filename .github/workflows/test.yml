@@ -16,8 +16,19 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: |
-        npm install
-        
+      run: npm install
+      
     - name: Run Tests
+      env:
+        ANDROID_DEVICE_NAME: 'Pixel_4a_API_33'
+        ANDROID_PLATFORM_VERSION: '13.0'
       run: npm test
+      
+    - name: Upload test artifacts
+      if: failure()
+      uses: actions/upload-artifact@v3
+      with:
+        name: test-failures
+        path: |
+          ./errorShots/
+          ./allure-results/
