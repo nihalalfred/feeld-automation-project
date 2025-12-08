@@ -19,6 +19,5 @@ exports.config = {
     }],
     
     hostname: 'hub.browserstack.com',
-    services: [['browserstack']],
     framework: 'mocha'
 };
