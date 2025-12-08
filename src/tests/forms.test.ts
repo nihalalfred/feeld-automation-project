@@ -1,5 +1,4 @@
 import FormsPage from '../pages/Forms.page';
-import { quitApp } from '../utils/cleanup';
 
 describe('Forms Feature Tests', () => {
     let formsPage: FormsPage

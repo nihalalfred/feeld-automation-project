@@ -1,6 +1,5 @@
 import LoginPage from '../pages/Login.page'
 import { DataGenerator, LoginCredentials } from '../utils/data-generator'
-import { quitApp } from '../utils/cleanup';
 
 describe('Login Feature Tests', () => {
     let loginPage: LoginPage

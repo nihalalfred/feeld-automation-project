@@ -1,4 +1,3 @@
-import { quitApp } from '../utils/cleanup';
 import HomePage from '../pages/Home.page';
 
 describe('Home Feature Tests', () => {
