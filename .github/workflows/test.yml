@@ -19,9 +19,9 @@ jobs:
     - name: Install dependencies
       run: npm install
       
-    - name: Check Tests (No device available)
-      run: |
-        echo "✅ Build successful"
-        echo "⚠️ Android tests require device/emulator"
-        echo "Run locally: npm test"
-        echo "Setup BrowserStack for CI"
+    - name: Run Tests on BrowserStack
+      env:
+        BROWSERSTACK_USERNAME: ${{ secrets.BROWSERSTACK_USERNAME }}
+        BROWSERSTACK_ACCESS_KEY: ${{ secrets.BROWSERSTACK_ACCESS_KEY }}
+        BROWSERSTACK_APP_URL: ${{ secrets.BROWSERSTACK_APP_URL }}
+      run: npx wdio wdio.bs.conf.js
