@@ -15,10 +15,6 @@ describe('Login Feature Tests', () => {
         await loginPage.navigateToLogin()
     })
 
-    after(async () => {
-        await quitApp();
-        });
-
      // Reset state after each test
     afterEach(async () => {
         // Always close alert if present

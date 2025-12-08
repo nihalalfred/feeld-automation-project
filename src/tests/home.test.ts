@@ -8,10 +8,6 @@ describe('Home Feature Tests', () => {
         homePage = new HomePage()
     });
 
-    after(async () => {
-    await quitApp();
-    });
-
     it('should display home screen', async () => {
         await homePage.isLogoVisible()
         const titleText = await homePage.getWebdriverText()

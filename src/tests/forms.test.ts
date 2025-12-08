@@ -8,10 +8,6 @@ describe('Forms Feature Tests', () => {
         formsPage = new FormsPage()
         await formsPage.navigateToForms()
     });
-
-    after(async () => {
-    await quitApp();
-    });
     
     it('should display forms screen', async () => {
         await expect(formsPage.textInput).toBeDisplayed()
